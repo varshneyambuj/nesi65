@@ -3,11 +3,8 @@
  *
  * Core types, macros, and constants for NES PPU programming.
  *
- * Author:  Ambuj Varshney <ambuj_varshney(at)daiict.ac.in>
+ * Author:  Ambuj Varshney <ambuj123@gmail.com>
  * License: GNU GPL v3
- *
- * Created for the Playpower Foundation (http://playpower.org).
- * Portions derived from rNES by Ernesto Borio (Petruza).
  */
 
 #ifndef NESI65_H

@@ -1,12 +1,12 @@
 /*
  * Hanuman Typing Warrior - NES Typing Game
  *
- * A port of Playpower Foundation's Hanuman Typing Warrior game.
+ * Hanuman Typing Warrior game.
  * The player types words displayed on screen using a Family Basic
  * keyboard. Each correct keystroke advances Hanuman towards a rock
  * tower, which he breaks after completing each word.
  *
- * Author:  Ambuj Varshney <ambuj_varshney(at)daiict.ac.in>
+ * Author:  Ambuj Varshney <ambuj123@gmail.com>
  * License: GNU GPL v3
  */
 

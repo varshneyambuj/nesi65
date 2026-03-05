@@ -4,7 +4,7 @@
  * Read NES controller state and test individual button presses.
  * The actual read routine is in nesi65-joystickc.s (hand-optimized 6502 asm).
  *
- * Author:  Ambuj Varshney <ambuj_varshney(at)daiict.ac.in>
+ * Author:  Ambuj Varshney <ambuj123@gmail.com>
  * License: GNU GPL v3
  */
 

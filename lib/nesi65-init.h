@@ -4,7 +4,7 @@
  * Functions to initialize the PPU, wait for VBlank, and
  * enable/disable sprite and background rendering.
  *
- * Author:  Ambuj Varshney <ambuj_varshney(at)daiict.ac.in>
+ * Author:  Ambuj Varshney <ambuj123@gmail.com>
  * License: GNU GPL v3
  */
 

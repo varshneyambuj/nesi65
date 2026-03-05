@@ -1,7 +1,7 @@
 /*
  * NESI65 - Miscellaneous Utilities
  *
- * Author:  Ambuj Varshney <ambuj_varshney(at)daiict.ac.in>
+ * Author:  Ambuj Varshney <ambuj123@gmail.com>
  * License: GNU GPL v3
  */
 

@@ -5,10 +5,9 @@
  * Each correct keystroke advances Hanuman forward, and after
  * completing a word, Hanuman breaks a piece of the rock tower.
  *
- * Originally written in assembly for Playpower Foundation,
- * ported to C using cc65 and nesi65.
+ * Originally written in assembly, ported to C using cc65 and nesi65.
  *
- * Author:  Ambuj Varshney <ambuj_varshney(at)daiict.ac.in>
+ * Author:  Ambuj Varshney <ambuj123@gmail.com>
  * License: GNU GPL v3
  */
 

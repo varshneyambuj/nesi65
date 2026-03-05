@@ -8,7 +8,7 @@
  * Controls: D-pad to move, SELECT to eat a number
  * Game modes: 1=Multiples, 2=Factors
  *
- * Author:  Ambuj Varshney <ambuj_varshney(at)daiict.ac.in>
+ * Author:  Ambuj Varshney <ambuj123@gmail.com>
  * License: GNU GPL v3
  */
 

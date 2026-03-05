@@ -5,7 +5,7 @@
  * on a grid of numbers and must eat all multiples or factors of a given
  * number while avoiding troggle enemies.
  *
- * Author:  Ambuj Varshney <ambuj_varshney(at)daiict.ac.in>
+ * Author:  Ambuj Varshney <ambuj123@gmail.com>
  * License: GNU GPL v3
  */
 

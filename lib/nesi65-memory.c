@@ -4,7 +4,7 @@
  * Most memory functions are implemented in nesi65-memoryc.s.
  * This file contains the C implementation of nesi_copy_tiles().
  *
- * Author:  Ambuj Varshney <ambuj_varshney(at)daiict.ac.in>
+ * Author:  Ambuj Varshney <ambuj123@gmail.com>
  * License: GNU GPL v3
  */
 

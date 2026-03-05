@@ -3,7 +3,7 @@
  *
  * Pseudo-random number generator (linear congruential) and delay function.
  *
- * Author:  Ambuj Varshney <ambuj_varshney(at)daiict.ac.in>
+ * Author:  Ambuj Varshney <ambuj123@gmail.com>
  * License: GNU GPL v3
  */
 

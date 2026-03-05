@@ -5,7 +5,7 @@
  * (hand-optimized 6502 assembly for reading the controller port).
  * This file is kept as a compilation unit for the library build.
  *
- * Author:  Ambuj Varshney <ambuj_varshney(at)daiict.ac.in>
+ * Author:  Ambuj Varshney <ambuj123@gmail.com>
  * License: GNU GPL v3
  */
 

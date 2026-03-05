@@ -5,7 +5,7 @@
  * the controller ports ($4016/$4017). Supports both Family Basic
  * and SUBOR keyboard layouts.
  *
- * Author:  Ambuj Varshney <ambuj_varshney(at)daiict.ac.in>
+ * Author:  Ambuj Varshney <ambuj123@gmail.com>
  * License: GNU GPL v3
  */
 

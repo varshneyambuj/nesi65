@@ -5,7 +5,7 @@
  * sprite DMA, and general RAM fill operations. Low-level routines
  * are implemented in nesi65-memoryc.s (hand-optimized 6502 asm).
  *
- * Author:  Ambuj Varshney <ambuj_varshney(at)daiict.ac.in>
+ * Author:  Ambuj Varshney <ambuj123@gmail.com>
  * License: GNU GPL v3
  */
 

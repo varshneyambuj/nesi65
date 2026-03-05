@@ -4,7 +4,7 @@
  * Support for the Family Basic keyboard and SUBOR-compatible keyboards
  * connected to the NES expansion port ($4016/$4017).
  *
- * Author:  Ambuj Varshney <ambuj_varshney(at)daiict.ac.in>
+ * Author:  Ambuj Varshney <ambuj123@gmail.com>
  * License: GNU GPL v3
  */
 

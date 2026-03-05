@@ -1,6 +1,6 @@
 # NESI65
 
-A C library for developing NES games using the [cc65](https://cc65.github.io/cc65/) 6502 compiler toolchain. Created for the [Playpower Foundation](http://playpower.org).
+A C library for developing NES games using the [cc65](https://cc65.github.io/cc65/) 6502 compiler toolchain.
 
 ## Project Structure
 
@@ -70,9 +70,7 @@ A typing game using the Family Basic keyboard. Words appear on screen and the pl
 
 ## Author
 
-Ambuj Varshney - ambuj_varshney(at)daiict.ac.in
-
-Portions derived from rNES by Ernesto Borio (Petruza).
+Ambuj Varshney - ambuj123@gmail.com
 
 ## License
 
