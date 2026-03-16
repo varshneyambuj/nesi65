@@ -34,9 +34,9 @@ extern volatile unsigned char tile_display_low;
 extern volatile unsigned char multiple_display;
 extern volatile unsigned char tile_series_value[];
 
-int prng(int);
-int delay(int);
-void init_prng(int, int);
+/* master_prng, prng, delay, init_prng declared via nesi65-misc.h */
+
+int nm_strlen(char *str);
 
 /* Grid cell screen positions (pixels) */
 byte grid_number_positions_x[6] = {10, 50, 90, 130, 170, 210};
@@ -77,7 +77,7 @@ int grid_number[5][6] = {
 };
 
 
-int abs(int n)
+int nm_abs(int n)
 {
 	if (n < 0)
 		return (-1 * n);
@@ -217,7 +217,7 @@ void draw_muncher(nesi_sprite *muncher_sprite, int x, int y)
 	}
 }
 
-int strlen(char *str)
+int nm_strlen(char *str)
 {
 	int cnt = 0;
 
@@ -253,13 +253,13 @@ void display_error_troggle(int error_no)
 	addr = a_addr(0x2006);
 
 	if (error_no == 0) {
-		draw_background_text(451, error_text[0], strlen(error_text[0]));
-		draw_background_text(493, error_text[1], strlen(error_text[1]));
-		draw_background_text(548, error_text[2], strlen(error_text[2]));
+		draw_background_text(451, error_text[0], nm_strlen(error_text[0]));
+		draw_background_text(493, error_text[1], nm_strlen(error_text[1]));
+		draw_background_text(548, error_text[2], nm_strlen(error_text[2]));
 	} else if (error_no == 1) {
-		draw_background_text(451, error_text[3], strlen(error_text[3]));
-		draw_background_text(486, error_text[4], strlen(error_text[4]));
-		draw_background_text(520, error_text[5], strlen(error_text[5]));
+		draw_background_text(451, error_text[3], nm_strlen(error_text[3]));
+		draw_background_text(486, error_text[4], nm_strlen(error_text[4]));
+		draw_background_text(520, error_text[5], nm_strlen(error_text[5]));
 	}
 
 	while (1) {

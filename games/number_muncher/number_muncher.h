@@ -16,6 +16,7 @@
 #include "nesi65-memory.h"
 #include "nesi65-keyboard.h"
 #include "nesi65-joystick.h"
+#include "nesi65-misc.h"
 
 /* Background palette (4 sub-palettes x 4 colors) */
 byte bkg_pal[] = {

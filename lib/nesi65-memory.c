@@ -30,7 +30,7 @@ void nesi_copy_tiles(byte *tiles, word start_from, word start_to, word quantity)
 	tiles += start_from << 4;
 
 	top = tiles;
-	top += (byte *)quantity;
+	top = top + quantity;
 
 	/* Set PPU VRAM write address */
 	a_addr(0x2006) = (byte)(start_to >> 4);

@@ -5,6 +5,7 @@
 #   make lib            - Build the nesi65 library object files
 #   make number_muncher - Build Number Muncher game ROM
 #   make hanuman_typing - Build Hanuman Typing Warrior game ROM
+#   make space_dodger   - Build Space Dodger game ROM
 #   make all            - Build everything
 #   make clean          - Remove intermediate build artifacts
 #   make distclean      - Remove all generated files including ROMs
@@ -27,14 +28,18 @@ BUILD_DIR   = build
 LD_CFG     = $(CONFIG_DIR)/nes_chr-ram.cfg
 CRT0       = $(RUNTIME_DIR)/crt0_chr-ram.o
 WAITVBLANK = $(RUNTIME_DIR)/waitvblank.o
-NES_LIB    = $(RUNTIME_DIR)/nes.lib
+NES_LIB    = /usr/share/cc65/lib/none.lib
 
 # Library source files
 LIB_C_SRCS = $(LIB_DIR)/nesi65-init.c \
              $(LIB_DIR)/nesi65-joystick.c \
              $(LIB_DIR)/nesi65-keyboard.c \
              $(LIB_DIR)/nesi65-memory.c \
-             $(LIB_DIR)/nesi65-misc.c
+             $(LIB_DIR)/nesi65-misc.c \
+             $(LIB_DIR)/nesi65-sound.c \
+             $(LIB_DIR)/nesi65-collision.c \
+             $(LIB_DIR)/nesi65-text.c \
+             $(LIB_DIR)/nesi65-math.c
 
 LIB_ASM_SRCS = $(LIB_DIR)/nesi65-joystickc.s \
                $(LIB_DIR)/nesi65-memoryc.s
@@ -51,9 +56,9 @@ INCLUDES = -I $(LIB_DIR)
 # Default target
 # ============================================================
 
-.PHONY: all lib number_muncher hanuman_typing clean distclean
+.PHONY: all lib number_muncher hanuman_typing space_dodger clean distclean
 
-all: lib number_muncher
+all: lib number_muncher space_dodger
 
 lib: $(LIB_OBJS)
 
@@ -107,6 +112,24 @@ $(HT_ROM): $(HT_OBJ) $(LIB_OBJS) | $(ROM_DIR)
 	$(LD) -C $(LD_CFG) $(WAITVBLANK) $(CRT0) $(HT_OBJ) $(LIB_OBJS) $(NES_LIB) -o $@
 
 # ============================================================
+# Space Dodger game
+# ============================================================
+
+SD_DIR  = $(GAME_DIR)/space_dodger
+SD_SRC  = $(SD_DIR)/space_dodger.c
+SD_OBJ  = $(BUILD_DIR)/space_dodger.o
+SD_ROM  = $(ROM_DIR)/Space_Dodger.nes
+
+space_dodger: $(SD_ROM)
+
+$(SD_OBJ): $(SD_SRC) $(SD_DIR)/space_dodger.h | $(BUILD_DIR)
+	$(CC) $(CFLAGS) $(INCLUDES) -I $(SD_DIR) -o $(BUILD_DIR)/space_dodger.s $<
+	$(AS) $(ASFLAGS) -o $@ $(BUILD_DIR)/space_dodger.s
+
+$(SD_ROM): $(SD_OBJ) $(LIB_OBJS) | $(ROM_DIR)
+	$(LD) -C $(LD_CFG) $(WAITVBLANK) $(CRT0) $(SD_OBJ) $(LIB_OBJS) $(NES_LIB) -o $@
+
+# ============================================================
 # Directory creation
 # ============================================================
 
@@ -124,4 +147,4 @@ clean:
 	rm -rf $(BUILD_DIR)
 
 distclean: clean
-	rm -f $(ROM_DIR)/Number_Muncher.nes $(ROM_DIR)/Hanuman_Typing.nes
+	rm -f $(ROM_DIR)/Number_Muncher.nes $(ROM_DIR)/Hanuman_Typing.nes $(ROM_DIR)/Space_Dodger.nes
